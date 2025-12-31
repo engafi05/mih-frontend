@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mih-dark: #001f3f;
+  --color-mih-blue: #0056b3;
+  --color-mih-gold: #c5a059;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+  font-family: 'Inter', 'Cairo', sans-serif; /* تأكد من دعم العربية */
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
