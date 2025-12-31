@@ -31,10 +31,10 @@ const JobsTable = () => {
         try {
             const token = localStorage.getItem('admin_token');
             const [jobsRes, specialtiesRes] = await Promise.all([
-                fetch('http://engafi05-001-site1.stempurl.com/api/admin/jobs', {
+                fetch('https://engafi05-001-site1.stempurl.com/api/admin/jobs', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 }),
-                fetch('http://engafi05-001-site1.stempurl.com/api/admin/specialties', {
+                fetch('https://engafi05-001-site1.stempurl.com/api/admin/specialties', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
             ]);
@@ -71,7 +71,7 @@ const JobsTable = () => {
         
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/jobs/${id}`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/jobs/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -94,7 +94,7 @@ const JobsTable = () => {
     const toggleJobStatus = async (id: number, currentStatus: boolean) => {
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/jobs/${id}/status`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/jobs/${id}/status`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -22,7 +22,7 @@ const ContactMessagesTable = () => {
     const fetchMessages = async () => {
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/contact-messages', {
+            const response = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/contact-messages', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const data = await response.json();
@@ -49,7 +49,7 @@ const ContactMessagesTable = () => {
         
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/contact-messages/${id}`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/contact-messages/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -72,7 +72,7 @@ const ContactMessagesTable = () => {
     const toggleReadStatus = async (id: number, currentStatus: boolean) => {
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/contact-messages/${id}/read`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/contact-messages/${id}/read`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -17,7 +17,7 @@ const LoginForm: React.FC = () => {
         setError(null);
 
         try {
-            const response = await fetch('http://engafi05-001-site1.stempurl.com/api/auth/login', {
+            const response = await fetch('https://engafi05-001-site1.stempurl.com/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password }),

@@ -8,7 +8,7 @@ import DoctorsPreview from '@/components/Home/DoctorsPreview';
 import BookingModal from '@/components/Home/BookingModal';
 import { Activity, Heart, Zap, Microscope, ShieldCheck, Calendar } from 'lucide-react';
 
-const API_BASE_URL = 'http://engafi05-001-site1.stempurl.com/api';
+const API_BASE_URL = 'https://engafi05-001-site1.stempurl.com/api';
 
 const IconMap: any = {
     Heart: <Heart size={32} />,

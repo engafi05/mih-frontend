@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import DoctorFilter from './DoctorFilter'; // تأكد أن ملف الفلترة موجود في نفس المجلد
 
-const API_BASE_URL = 'http://engafi05-001-site1.stempurl.com/api';
+const API_BASE_URL = 'https://engafi05-001-site1.stempurl.com/api';
 
 async function getDoctorsData() {
     try {

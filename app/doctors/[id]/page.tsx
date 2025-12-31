@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Stethoscope, Award, Clock, MapPin, ChevronRight, UserRound, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
-const API_BASE_URL = 'http://engafi05-001-site1.stempurl.com/api';
+const API_BASE_URL = 'https://engafi05-001-site1.stempurl.com/api';
 
 async function getDoctorDetails(id: string) {
     try {

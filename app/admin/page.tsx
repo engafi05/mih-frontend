@@ -8,7 +8,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     const fetchStats = async () => {
       const token = localStorage.getItem('admin_token');
-      const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/stats', {
+      const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/stats', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();

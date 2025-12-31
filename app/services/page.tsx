@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Activity, Heart, ShieldCheck, Microscope, Zap, Thermometer } from 'lucide-react';
 
-const API_BASE_URL = 'http://engafi05-001-site1.stempurl.com/api';
+const API_BASE_URL = 'https://engafi05-001-site1.stempurl.com/api';
 
 // خريطة الأيقونات
 const IconMap: any = {

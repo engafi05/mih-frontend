@@ -51,8 +51,8 @@ export default function UserManagementPage() {
       const headers = { 'Authorization': `Bearer ${token}` };
 
       const [usersRes, pagesRes] = await Promise.all([
-        fetch('http://engafi05-001-site1.stempurl.com/api/admin/users', { headers }),
-        fetch('http://engafi05-001-site1.stempurl.com/api/admin/pages', { headers })
+        fetch('https://engafi05-001-site1.stempurl.com/api/admin/users', { headers }),
+        fetch('https://engafi05-001-site1.stempurl.com/api/admin/pages', { headers })
       ]);
       
       const usersData = await usersRes.json();
@@ -73,7 +73,7 @@ export default function UserManagementPage() {
     const token = localStorage.getItem('admin_token');
 
     try {
-      const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/users', {
+      const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/users', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export default function UserManagementPage() {
       const newUser = await res.json();
 
       if (res.ok && selectedPageIds.length > 0) {
-        await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/users/${newUser.id}/permissions`, {
+        await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/users/${newUser.id}/permissions`, {
           method: 'PUT',
           headers: { 
             'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export default function UserManagementPage() {
     setEditingUser(user);
     const token = localStorage.getItem('admin_token');
     try {
-      const res = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/users/${user.id}/permissions`, {
+      const res = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/users/${user.id}/permissions`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
@@ -132,7 +132,7 @@ export default function UserManagementPage() {
     setIsUpdating(true);
     const token = localStorage.getItem('admin_token');
     try {
-      const res = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/users/${editingUser.id}/permissions`, {
+      const res = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/users/${editingUser.id}/permissions`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json', 

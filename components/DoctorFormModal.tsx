@@ -34,9 +34,9 @@ interface DoctorFormModalProps {
   currentDoctor: Doctor | null; // بيانات الطبيب الحالي للتعديل
 }
 
-const API_URL = 'http://engafi05-001-site1.stempurl.com/api/doctors'; 
-const SPECIALTY_API_URL = 'http://engafi05-001-site1.stempurl.com/api/specialties'; 
-const TITLE_API_URL = 'http://engafi05-001-site1.stempurl.com/api/titles'; // جديد: نقطة وصول الألقاب
+const API_URL = 'https://engafi05-001-site1.stempurl.com/api/doctors'; 
+const SPECIALTY_API_URL = 'https://engafi05-001-site1.stempurl.com/api/specialties'; 
+const TITLE_API_URL = 'https://engafi05-001-site1.stempurl.com/api/titles'; // جديد: نقطة وصول الألقاب
 
 const DoctorFormModal: React.FC<DoctorFormModalProps> = ({ isOpen, onClose, onSuccess, currentDoctor }) => {
   const [formData, setFormData] = useState<Doctor>({

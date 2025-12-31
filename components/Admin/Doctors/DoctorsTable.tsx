@@ -26,7 +26,7 @@ const DoctorsTable = () => {
                 throw new Error('يرجى تسجيل الدخول أولاً');
             }
 
-            const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/doctors', {
+            const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/doctors', {
                 headers: { 
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ const DoctorsTable = () => {
         if (window.confirm('هل أنت متأكد من حذف هذا الطبيب؟')) {
             try {
                 const token = localStorage.getItem('admin_token');
-                const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/doctors/${doctorId}`, {
+                const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/doctors/${doctorId}`, {
                     method: 'DELETE',
                     headers: { 
                         'Authorization': `Bearer ${token}`,

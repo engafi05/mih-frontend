@@ -16,7 +16,7 @@ export default function UsersManagement() {
     setLoading(true);
     const token = localStorage.getItem('admin_token');
     try {
-      const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/users', {
+      const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/users', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();

@@ -92,8 +92,8 @@ const ServiceFormModal: React.FC<ServiceFormModalProps> = ({
         };
 
         const url = service?.ServiceID 
-            ? `http://engafi05-001-site1.stempurl.com/api/admin/services/${service.ServiceID}`
-            : 'http://engafi05-001-site1.stempurl.com/api/admin/services';
+            ? `https://engafi05-001-site1.stempurl.com/api/admin/services/${service.ServiceID}`
+            : 'https://engafi05-001-site1.stempurl.com/api/admin/services';
 
         const method = service?.ServiceID ? 'put' : 'post';
 
@@ -233,7 +233,7 @@ const ServicesTable: React.FC = () => {
                 throw new Error('No authentication token found');
             }
 
-            const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/services', {
+            const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/services', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -262,7 +262,7 @@ const ServicesTable: React.FC = () => {
                 throw new Error('No authentication token found');
             }
 
-            await axios.delete(`http://engafi05-001-site1.stempurl.com/api/admin/services/${id}`, {
+            await axios.delete(`https://engafi05-001-site1.stempurl.com/api/admin/services/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

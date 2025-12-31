@@ -36,8 +36,8 @@ const SpecialtyForm: React.FC<SpecialtyFormProps> = ({ specialty, onSuccess }) =
         try {
             const token = localStorage.getItem('admin_token');
             const url = specialty?.SpecialtyID 
-                ? `http://engafi05-001-site1.stempurl.com/api/admin/specialties/${specialty.SpecialtyID}`
-                : 'http://engafi05-001-site1.stempurl.com/api/admin/specialties';
+                ? `https://engafi05-001-site1.stempurl.com/api/admin/specialties/${specialty.SpecialtyID}`
+                : 'https://engafi05-001-site1.stempurl.com/api/admin/specialties';
 
             const method = specialty?.SpecialtyID ? 'PUT' : 'POST';
 

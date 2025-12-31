@@ -29,7 +29,7 @@ const UserForm: React.FC<{ onSave: () => void, onClose: () => void }> = ({ onSav
     // سنرسل الصلاحيات كـ String مفصول بفاصلة
     const payload = { ...formData, AllowedPages: allowedPages.join(',') };
 
-    const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/users', {
+    const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify(payload)

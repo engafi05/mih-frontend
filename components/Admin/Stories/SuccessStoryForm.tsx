@@ -43,7 +43,7 @@ const SuccessStoryForm: React.FC<SuccessStoryFormProps> = ({ story, onSuccess, d
                 isPublished: story.IsPublished
             });
             if (story.ImagePath) {
-                setImagePreview(`http://localhost:5000${story.ImagePath}`);
+                setImagePreview(`http://https://engafi05-001-site1.stempurl.com${story.ImagePath}`);
             }
         }
     }, [story]);
@@ -70,8 +70,8 @@ const SuccessStoryForm: React.FC<SuccessStoryFormProps> = ({ story, onSuccess, d
         try {
             const token = localStorage.getItem('admin_token');
             const url = story?.StoryID 
-                ? `http://engafi05-001-site1.stempurl.com/api/admin/success-stories/${story.StoryID}`
-                : 'http://engafi05-001-site1.stempurl.com/api/admin/success-stories';
+                ? `https://engafi05-001-site1.stempurl.com/api/admin/success-stories/${story.StoryID}`
+                : 'https://engafi05-001-site1.stempurl.com/api/admin/success-stories';
 
             const method = story?.StoryID ? 'PUT' : 'POST';
 

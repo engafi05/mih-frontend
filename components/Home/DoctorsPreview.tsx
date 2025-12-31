@@ -9,7 +9,7 @@ export default function DoctorsPreview({ doctors, onBookClick }: { doctors: any[
                 <div key={doc.DoctorID} className="bg-white rounded-[2.5rem] p-6 shadow-xl shadow-slate-100 border border-slate-50 group hover:-translate-y-2 transition-all duration-500">
                     <div className="aspect-square bg-slate-100 rounded-[2rem] mb-6 overflow-hidden relative">
                         {doc.ProfileImagePath ? (
-                            <img src={`http://localhost:5000${doc.ProfileImagePath}`} alt={doc.Name} className="w-full h-full object-cover" />
+                            <img src={`https://engafi05-001-site1.stempurl.com${doc.ProfileImagePath}`} alt={doc.Name} className="w-full h-full object-cover" />
                         ) : (
                             <div className="w-full h-full flex items-center justify-center text-slate-300">
                                 <UserRound size={80} />

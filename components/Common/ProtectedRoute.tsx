@@ -21,7 +21,7 @@ const ProtectedRoute = ({ children, requiredPermission = 'view' }: any) => {
 
             try {
                 // ملاحظة: تأكد أن هذا الرابط يعمل على الباكيند الجديد الخاص بك
-                const response = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/me', {
+                const response = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/me', {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

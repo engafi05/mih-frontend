@@ -10,7 +10,7 @@ export default function CareersPage() {
     const [selectedJob, setSelectedJob] = useState(null);
 
     useEffect(() => {
-        axios.get('http://engafi05-001-site1.stempurl.com/api/public/jobs')
+        axios.get('https://engafi05-001-site1.stempurl.com/api/public/jobs')
             .then(res => setJobs(res.data))
             .catch(err => console.error(err));
     }, []);

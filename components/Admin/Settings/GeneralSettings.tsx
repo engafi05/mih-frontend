@@ -69,16 +69,16 @@ const GeneralSettings = () => {
                 };
 
                 if (activeTab === 'general') {
-                    const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/settings', config);
+                    const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/settings', config);
                     setSettings(response.data);
                     if (response.data.HospitalLogo) {
-                        setImagePreview(`http://localhost:5000/${response.data.HospitalLogo}`);
+                        setImagePreview(`http://https://engafi05-001-site1.stempurl.com/${response.data.HospitalLogo}`);
                     }
                 } else if (activeTab === 'users') {
-                    const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/users', config);
+                    const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/users', config);
                     setUsers(Array.isArray(response.data) ? response.data : []);
                 } else if (activeTab === 'logs') {
-                    const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/logs', config);
+                    const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/logs', config);
                     setLogs(Array.isArray(response.data) ? response.data : []);
                 }
             } catch (error) {
@@ -142,7 +142,7 @@ const GeneralSettings = () => {
                 formData.append('removeImage', 'true');
             }
 
-            const response = await axios.put('http://engafi05-001-site1.stempurl.com/api/admin/settings', formData, {
+            const response = await axios.put('https://engafi05-001-site1.stempurl.com/api/admin/settings', formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data'
@@ -153,7 +153,7 @@ const GeneralSettings = () => {
             setSettings(response.data);
             
             if (response.data.HospitalLogo) {
-                setImagePreview(`http://localhost:5000/${response.data.HospitalLogo}`);
+                setImagePreview(`http://https://engafi05-001-site1.stempurl.com/${response.data.HospitalLogo}`);
             } else {
                 setImagePreview(null);
             }
@@ -186,8 +186,8 @@ const GeneralSettings = () => {
                 }
             };
 
-            await axios.delete(`http://engafi05-001-site1.stempurl.com/api/admin/users/${userId}`, config);
-            const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/users', config);
+            await axios.delete(`https://engafi05-001-site1.stempurl.com/api/admin/users/${userId}`, config);
+            const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/users', config);
             setUsers(response.data);
             
             setMessage({ type: 'success', text: 'تم حذف المستخدم بنجاح' });
@@ -212,7 +212,7 @@ const GeneralSettings = () => {
 
             if (selectedUser) {
                 await axios.put(
-                    `http://engafi05-001-site1.stempurl.com/api/admin/users/${selectedUser.id}`,
+                    `https://engafi05-001-site1.stempurl.com/api/admin/users/${selectedUser.id}`,
                     {
                         username: userData.username,
                         email: userData.email,
@@ -227,7 +227,7 @@ const GeneralSettings = () => {
                     throw new Error('كلمة المرور مطلوبة');
                 }
                 await axios.post(
-                    'http://engafi05-001-site1.stempurl.com/api/admin/users',
+                    'https://engafi05-001-site1.stempurl.com/api/admin/users',
                     {
                         username: userData.username,
                         email: userData.email,
@@ -239,7 +239,7 @@ const GeneralSettings = () => {
                 );
             }
 
-            const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/users', config);
+            const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/users', config);
             setUsers(response.data);
             setShowAddUserModal(false);
             setSelectedUser(null);

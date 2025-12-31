@@ -58,7 +58,7 @@ export default function BookingModal({ isOpen, onClose, selectedDoctorId, doctor
                 AppointmentDate: formData.appointmentDate,
                 AppointmentTime: formData.appointmentTime
             };
-            await axios.post('http://engafi05-001-site1.stempurl.com/api/public/bookings', payload);
+            await axios.post('https://engafi05-001-site1.stempurl.com/api/public/bookings', payload);
             setSuccess(true);
             setTimeout(() => { setSuccess(false); onClose(); }, 3000);
         } catch (err) {

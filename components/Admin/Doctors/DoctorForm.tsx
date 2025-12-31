@@ -43,7 +43,7 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSuccess }) => {
         const fetchSpecialties = async () => {
             try {
                 const token = localStorage.getItem('admin_token');
-                const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/specialties', {
+                const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/specialties', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (res.ok) {
@@ -65,8 +65,8 @@ const DoctorForm: React.FC<DoctorFormProps> = ({ doctor, onSuccess }) => {
             const token = localStorage.getItem('admin_token');
             const method = doctor?.DoctorID ? 'PUT' : 'POST';
             const url = doctor?.DoctorID 
-                ? `http://engafi05-001-site1.stempurl.com/api/admin/doctors/${doctor.DoctorID}`
-                : 'http://engafi05-001-site1.stempurl.com/api/admin/doctors';
+                ? `https://engafi05-001-site1.stempurl.com/api/admin/doctors/${doctor.DoctorID}`
+                : 'https://engafi05-001-site1.stempurl.com/api/admin/doctors';
 
             const response = await fetch(url, {
                 method,

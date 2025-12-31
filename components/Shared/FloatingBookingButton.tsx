@@ -13,8 +13,8 @@ export default function FloatingBookingButton() {
         const loadData = async () => {
             try {
                 const [docsRes, specRes] = await Promise.all([
-                    axios.get('http://engafi05-001-site1.stempurl.com/api/public/doctors'),
-                    axios.get('http://engafi05-001-site1.stempurl.com/api/public/specialties')
+                    axios.get('https://engafi05-001-site1.stempurl.com/api/public/doctors'),
+                    axios.get('https://engafi05-001-site1.stempurl.com/api/public/specialties')
                 ]);
                 setData({ doctors: docsRes.data, specialties: specRes.data });
             } catch (err) {

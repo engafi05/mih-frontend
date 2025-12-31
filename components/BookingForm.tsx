@@ -13,19 +13,19 @@ export default function BookingForm() {
 
     useEffect(() => {
         // جلب التخصصات عند التحميل
-        axios.get('http://engafi05-001-site1.stempurl.com/api/public/specialties').then(res => setSpecialties(res.data));
+        axios.get('https://engafi05-001-site1.stempurl.com/api/public/specialties').then(res => setSpecialties(res.data));
     }, []);
 
     const handleSpecialtyChange = (id: string) => {
         setFormData({ ...formData, specialtyId: id, doctorId: '' });
         // جلب أطباء هذا التخصص فقط
-        axios.get(`http://engafi05-001-site1.stempurl.com/api/public/doctors?specialtyId=${id}`).then(res => setDoctors(res.data));
+        axios.get(`https://engafi05-001-site1.stempurl.com/api/public/doctors?specialtyId=${id}`).then(res => setDoctors(res.data));
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            await axios.post('http://engafi05-001-site1.stempurl.com/api/public/appointments', formData);
+            await axios.post('https://engafi05-001-site1.stempurl.com/api/public/appointments', formData);
             setSubmitted(true);
         } catch (error) { alert("حدث خطأ أثناء الحجز، يرجى المحاولة لاحقاً."); }
     };

@@ -16,7 +16,7 @@ export function usePermissions() {
                     return;
                 }
 
-                const response = await axios.get('http://engafi05-001-site1.stempurl.com/api/admin/pages', {
+                const response = await axios.get('https://engafi05-001-site1.stempurl.com/api/admin/pages', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
 

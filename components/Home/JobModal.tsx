@@ -19,7 +19,7 @@ export default function JobModal({ isOpen, onClose, selectedJob }: any) {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('http://engafi05-001-site1.stempurl.com/api/public/apply', {
+            await axios.post('https://engafi05-001-site1.stempurl.com/api/public/apply', {
                 ...formData,
                 JobID: selectedJob.JobID
             });

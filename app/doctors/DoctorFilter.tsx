@@ -54,7 +54,7 @@ export default function DoctorFilter({ doctors, specialties }: any) {
                             <div className="h-64 bg-slate-100 flex items-center justify-center relative shadow-inner">
                                 {doc.ProfileImagePath ? (
                                     <img 
-                                        src={`http://localhost:5000${doc.ProfileImagePath}`} 
+                                        src={`http://https://engafi05-001-site1.stempurl.com${doc.ProfileImagePath}`} 
                                         alt={doc.Name} 
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                                     />

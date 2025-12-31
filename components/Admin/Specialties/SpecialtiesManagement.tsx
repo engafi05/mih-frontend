@@ -9,7 +9,7 @@ export default function SpecialtiesManagement() {
 
   const fetchSpecs = async () => {
     const token = localStorage.getItem('admin_token');
-    const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/specialties', {
+    const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/specialties', {
       headers: { 'Authorization': `Bearer ${token}` }
     });
     const data = await res.json();
@@ -21,7 +21,7 @@ export default function SpecialtiesManagement() {
     e.preventDefault();
     if (!newName) return;
     const token = localStorage.getItem('admin_token');
-    const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/specialties', {
+    const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/specialties', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify({ SpecialtyName: newName })

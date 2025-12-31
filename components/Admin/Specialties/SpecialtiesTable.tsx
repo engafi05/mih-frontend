@@ -20,7 +20,7 @@ const SpecialtiesTable = () => {
     const fetchSpecialties = async () => {
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/specialties', {
+            const response = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/specialties', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const data = await response.json();
@@ -52,7 +52,7 @@ const SpecialtiesTable = () => {
         
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/specialties/${id}`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/specialties/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,

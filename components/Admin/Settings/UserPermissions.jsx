@@ -12,10 +12,10 @@ const UserPermissions = ({ userId, onClose }) => {
             try {
                 const token = localStorage.getItem('admin_token');
                 const [pagesRes, permissionsRes] = await Promise.all([
-                    axios.get('http://engafi05-001-site1.stempurl.com/api/admin/pages', {
+                    axios.get('https://engafi05-001-site1.stempurl.com/api/admin/pages', {
                         headers: { 'Authorization': `Bearer ${token}` }
                     }),
-                    axios.get(`http://engafi05-001-site1.stempurl.com/api/admin/users/${userId}/permissions`, {
+                    axios.get(`https://engafi05-001-site1.stempurl.com/api/admin/users/${userId}/permissions`, {
                         headers: { 'Authorization': `Bearer ${token}` }
                     })
                 ]);
@@ -49,7 +49,7 @@ const UserPermissions = ({ userId, onClose }) => {
             setSaving(true);
             const token = localStorage.getItem('admin_token');
             await axios.put(
-                `http://engafi05-001-site1.stempurl.com/api/admin/users/${userId}/permissions`,
+                `https://engafi05-001-site1.stempurl.com/api/admin/users/${userId}/permissions`,
                 {
                     permissions: pages.map(page => ({
                         pageId: page.PageID,

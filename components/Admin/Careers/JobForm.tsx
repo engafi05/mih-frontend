@@ -50,8 +50,8 @@ const JobForm: React.FC<JobFormProps> = ({ job, onSuccess, specialties }) => {
         try {
             const token = localStorage.getItem('admin_token');
             const url = job?.JobID 
-                ? `http://engafi05-001-site1.stempurl.com/api/admin/jobs/${job.JobID}`
-                : 'http://engafi05-001-site1.stempurl.com/api/admin/jobs';
+                ? `https://engafi05-001-site1.stempurl.com/api/admin/jobs/${job.JobID}`
+                : 'https://engafi05-001-site1.stempurl.com/api/admin/jobs';
 
             const method = job?.JobID ? 'PUT' : 'POST';
 

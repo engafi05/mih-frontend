@@ -37,10 +37,10 @@ const SuccessStoriesTable = () => {
         try {
             const token = localStorage.getItem('admin_token');
             const [storiesRes, doctorsRes] = await Promise.all([
-                fetch('http://engafi05-001-site1.stempurl.com/api/admin/success-stories', {
+                fetch('https://engafi05-001-site1.stempurl.com/api/admin/success-stories', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 }),
-                fetch('http://engafi05-001-site1.stempurl.com/api/admin/doctors', {
+                fetch('https://engafi05-001-site1.stempurl.com/api/admin/doctors', {
                     headers: { 'Authorization': `Bearer ${token}` }
                 })
             ]);
@@ -77,7 +77,7 @@ const SuccessStoriesTable = () => {
         
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/success-stories/${id}`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/success-stories/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -100,7 +100,7 @@ const SuccessStoriesTable = () => {
     const togglePublishStatus = async (id: number, currentStatus: boolean) => {
         try {
             const token = localStorage.getItem('admin_token');
-            const response = await fetch(`http://engafi05-001-site1.stempurl.com/api/admin/success-stories/${id}/publish`, {
+            const response = await fetch(`https://engafi05-001-site1.stempurl.com/api/admin/success-stories/${id}/publish`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -178,7 +178,7 @@ const SuccessStoriesTable = () => {
                                     {story.ImagePath ? (
                                         <div className="h-10 w-10 rounded-full overflow-hidden bg-gray-200">
                                             <img 
-                                                src={`http://localhost:5000${story.ImagePath}`}
+                                                src={`http://https://engafi05-001-site1.stempurl.com${story.ImagePath}`}
                                                 alt={story.Title}
                                                 className="h-full w-full object-cover"
                                             />

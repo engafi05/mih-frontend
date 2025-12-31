@@ -9,7 +9,7 @@ export default function ChangePassword() {
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     const token = localStorage.getItem('admin_token');
-    const res = await fetch('http://engafi05-001-site1.stempurl.com/api/admin/update-password', {
+    const res = await fetch('https://engafi05-001-site1.stempurl.com/api/admin/update-password', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify(passwords)

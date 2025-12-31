@@ -36,8 +36,8 @@ const ServicesForm: React.FC<ServicesFormProps> = ({ services, onSuccess }) => {
         try {
             const token = localStorage.getItem('admin_token');
             const url = services?.ServicesID 
-                ? `http://engafi05-001-site1.stempurl.com/api/admin/services/${services.ServicesID}`
-                : 'http://engafi05-001-site1.stempurl.com/api/admin/services';
+                ? `https://engafi05-001-site1.stempurl.com/api/admin/services/${services.ServicesID}`
+                : 'https://engafi05-001-site1.stempurl.com/api/admin/services';
 
             const method = services?.ServicesID ? 'PUT' : 'POST';
 
