@@ -139,7 +139,8 @@ const DoctorsTable = () => {
                     title={editingDoctor ? 'تعديل بيانات الطبيب' : 'إضافة طبيب جديد'}
                 >
                     <DoctorForm 
-                        doctor={editingDoctor} 
+                   // بدلاً من:    doctor={editingDoctor}
+                       doctor={editingDoctor as any}  // أضف "as any" هنا
                         onSuccess={() => {
                             setIsModalOpen(false);
                             setEditingDoctor(null);
