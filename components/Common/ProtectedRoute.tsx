@@ -1,7 +1,7 @@
 // components/common/ProtectedRoute.tsx
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { checkPermission } from '../../utils/permissions';
+
 
 const ProtectedRoute = ({ children, requiredPermission = 'view' }) => {
     const router = useRouter();
