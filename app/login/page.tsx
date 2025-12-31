@@ -67,7 +67,7 @@ localStorage.setItem('user_allowed_pages', user.allowedPages);
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-xl border border-gray-100">
         <div className="text-center space-y-2">
           <h2 className="text-3xl font-extrabold text-indigo-700">دخول الإدارة</h2>
-          <p className="text-gray-500 text-sm">مجموعة المعاهد الطبية - لوحة التحكم</p>
+          <p className="text-gray-500 text-sm">مستشفى مصر الدولى - لوحة التحكم</p>
         </div>
         
         {error && (
@@ -120,7 +120,7 @@ localStorage.setItem('user_allowed_pages', user.allowedPages);
         </form>
 
         <div className="text-center pt-4">
-          <p className="text-xs text-gray-400">نظام إدارة المحتوى الخاص بمجموعة MIH © 2025</p>
+          <p className="text-xs text-gray-400">نظام إدارة المحتوى الخاص بمجموعة مستشفى مصر  الدولى © 2025</p>
         </div>
       </div>
     </div>
