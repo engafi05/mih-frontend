@@ -15,6 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        {/* حل مشكلة الحظر للمحتوى غير الآمن (Mixed Content) */}
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </head>
       <body className="bg-white text-slate-900 antialiased overflow-x-hidden">
         <div className="flex flex-col min-h-screen">
           {/* شريط التنقل (التبّات) */}
@@ -22,9 +26,11 @@ export default function RootLayout({
           
           {/* محتوى الصفحة المتغير */}
           <main className="flex-grow w-full overflow-hidden">
-    {children}
-</main>
-<FloatingBookingButton />
+            {children}
+          </main>
+          
+          <FloatingBookingButton />
+          
           {/* الفوتر */}
           <Footer />
         </div>
