@@ -20,7 +20,7 @@ const ServicesForm: React.FC<ServicesFormProps> = ({ services, onSuccess }) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        if (specialty) {
+        if (services) {
             setFormData({
                 servicesName: services.ServicesName,
                 description: services.Description || '',
