@@ -3,8 +3,9 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 
-const ProtectedRoute = ({ children, requiredPermission = 'view' }) => {
-    const router = useRouter();
+// بدلا من    const ProtectedRoute = ({ children, requiredPermission = 'view' }) => {
+const ProtectedRoute = ({ children, requiredPermission = 'view' }: any) => { 
+   const router = useRouter();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
