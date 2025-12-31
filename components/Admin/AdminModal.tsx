@@ -9,6 +9,7 @@ interface AdminModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
+  size?: string; // أضف هذا السطر
   children: React.ReactNode;
 }
 
